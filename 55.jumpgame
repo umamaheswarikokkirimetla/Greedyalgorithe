@@ -1,0 +1,10 @@
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        mi=0
+        n=len(nums)
+        for i in range(n):
+            if i>mi:
+                return False
+            mi=max(mi,i+nums[i])
+        return True
+        
